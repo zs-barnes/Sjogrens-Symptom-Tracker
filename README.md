@@ -1,9 +1,2 @@
 # symptom-tracker-2
-Zachary Barnes
-Lydia Ha
-Something
-Thu Bi or not Thu Bi
-Lydia made the next change as part of step 4
-
-# time to push it to the limit
-
+An app designed exclusively for people who are diagnosed with Sjögrens that allows the patient to objectively keep track of symptoms for their own usage as well as for their doctor. 
