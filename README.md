@@ -1,13 +1,9 @@
 # symptom-tracker-2
-<<<<<<< Updated upstream
 Zachary Barnes
 Lydia Ha
-SOmething
+Something
 Thu Bi or not Thu Bi
-=======
-<<<<<<< Updated upstream
-Zachary Barnes
-=======
+Lydia made the next change as part of step 4
+
 # time to push it to the limit
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+
