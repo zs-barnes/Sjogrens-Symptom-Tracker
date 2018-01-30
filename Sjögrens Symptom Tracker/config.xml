@@ -2,10 +2,10 @@
 <widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Sjögrens Symptom Tracker</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        An app designed exclusively for people who are diagnosed with Sjögrens that allows the patient to objectively keep track of symptoms for their own usage as well as for their doctor.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="zsbarnes@knox.edu" >
+        Savage Team
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
