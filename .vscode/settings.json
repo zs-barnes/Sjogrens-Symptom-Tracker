@@ -1,0 +1,11 @@
+{
+    "git.ignoreLimitWarning": true,
+    "files.associations": {
+        "list": "c",
+        "__locale": "c",
+        "algorithm": "c",
+        "chrono": "c",
+        "limits": "c",
+        "ratio": "c"
+    }
+}
