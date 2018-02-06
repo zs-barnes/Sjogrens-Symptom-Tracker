@@ -1,0 +1,14 @@
+.card{
+    width:100%;
+    background-image: -webkit-linear-gradient(bottom right,#ffffff, #F0F8FF, #63c0f9);
+    size:100%;
+    }
+    
+    body{
+    background-image: -webkit-linear-gradient(bottom left,#ffffff, #F0F8FF, #63c0f9);
+padding:26px    
+}
+    .btn{
+        width:100%;
+        padding:26px
+    }
