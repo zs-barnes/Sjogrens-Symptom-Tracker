@@ -1,18 +1,16 @@
 .fa{
     color:white;
 }
-.fa:hover{
-    color:black;    
-}
 
 .table{
     border-collapse: separate;
     border-spacing: 0px 15px;
 }
-.fa{
-    color: white;
-}
 
 .fa:hover{
+    color: slategray;
+}
+
+.gray {
     color: slategray;
 }
