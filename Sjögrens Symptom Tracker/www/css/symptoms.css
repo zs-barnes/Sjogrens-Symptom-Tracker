@@ -1,9 +1,90 @@
 body {
-background: radial-gradient(#ffffff, #F0F8FF, #63c0f9);
+	background: radial-gradient(#ffffff, #F0F8FF, #63c0f9);
+}
+
+.container {
+	max-height: 150px;
+	overflow: auto;
+}
+
+
+.badgebox
+{
+    opacity: 0;
+}
+
+.badgebox + .badge
+{
+    /* Move the check mark away when unchecked */
+    text-indent: -999999px;
+    /* Makes the badge's width stay the same checked and unchecked */
+	width: 27px;
+}
+
+.badgebox:focus + .badge
+{
+    /* Set something to make the badge looks focused */
+    /* This really depends on the application, in my case it was: */
+    
+    /* Adding a light border */
+    box-shadow: inset 0px 0px 5px;
+    /* Taking the difference out of the padding */
+}
+
+.badgebox:checked + .badge
+{
+    /* Move the check mark back when checked */
+	text-indent: 0;
 }
 
 h2, h3 {
    color: Black;
+}
+
+.btn-prim { 
+  color: #FFFFFF; 
+  background-color: #3D94E0; 
+  border-color: #3D94E0; 
+} 
+ 
+.btn-prim:hover, 
+.btn-prim:focus, 
+.btn-prim:active, 
+.btn-prim.active, 
+.open .dropdown-toggle.btn-prim { 
+  color: #FFFFFF; 
+  background-color: #006DCC; 
+  border-color: #3D94E0; 
+} 
+ 
+.btn-prim:active, 
+.btn-prim.active, 
+.open .dropdown-toggle.btn-prim { 
+  background-image: none; 
+} 
+ 
+.btn-prim.disabled, 
+.btn-prim[disabled], 
+fieldset[disabled] .btn-prim, 
+.btn-prim.disabled:hover, 
+.btn-prim[disabled]:hover, 
+fieldset[disabled] .btn-prim:hover, 
+.btn-prim.disabled:focus, 
+.btn-prim[disabled]:focus, 
+fieldset[disabled] .btn-prim:focus, 
+.btn-prim.disabled:active, 
+.btn-prim[disabled]:active, 
+fieldset[disabled] .btn-prim:active, 
+.btn-prim.disabled.active, 
+.btn-prim[disabled].active, 
+fieldset[disabled] .btn-prim.active { 
+  background-color: #3D94E0; 
+  border-color: #3D94E0; 
+} 
+ 
+.btn-prim .badge { 
+  color: #3D94E0; 
+  background-color: #FFFFFF; 
 }
 
 .btn-pink { 
@@ -104,14 +185,14 @@ fieldset[disabled] .btn-ppurple.active {
   border-color: #7e57c2; 
 }
 
-btn-purple:hover, 
+.btn-purple:hover, 
 .btn-purple:focus, 
 .btn-purple:active, 
 .btn-purple.active, 
 .open .dropdown-toggle.btn-purple { 
-  color: #ffffff; 
-  background-color: #49247A; 
-  border-color: #130269; 
+  color: #FFFFFF; 
+  background-color: #441C8A; 
+  border-color: #7E57C2; 
 } 
  
 .btn-purple:active, 
@@ -135,13 +216,13 @@ fieldset[disabled] .btn-purple:active,
 .btn-purple.disabled.active, 
 .btn-purple[disabled].active, 
 fieldset[disabled] .btn-purple.active { 
-  background-color: #611BBD; 
-  border-color: #130269; 
+  background-color: #7E57C2; 
+  border-color: #7E57C2; 
 } 
  
 .btn-purple .badge { 
-  color: #611BBD; 
-  background-color: #ffffff; 
+  color: #7E57C2; 
+  background-color: #FFFFFF; 
 }
 
 .btn-dblue { 
@@ -466,3 +547,4 @@ fieldset[disabled] .btn-red.active {
   color: #F44336; 
   background-color: #FFFFFF; 
 }
+
