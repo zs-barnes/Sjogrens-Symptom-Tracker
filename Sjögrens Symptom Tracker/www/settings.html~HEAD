@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />-->
+    
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="css/settings.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <title>Sjögrens Symptom Tracker</title>
+</head>
+
+<body>
+<div class="row equal h-100">
+                <div class="col-md-12">
+                        <div class="card text-center">
+                            <i class="fa fa-gear fa-2x"></i>
+                            <h3>Settings</h3>
+                            <div class="btn-group-vertical ">
+                            <button type="button" class="btn btn-primary text-left">Profile</button>                 
+                            <button type="button" class="btn btn-primary text-left">Email</button>
+                            <button type="button" class="btn btn-primary text-left">Support</button>   
+	
+						<div class="dropdown">
+  						<button class="btn btn-primary dropdown-toggle text-left" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+  						  Social Media
+ 						</button>
+  						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  						<a href="https://www.facebook.com/SjogrensSyndromeFoundation/" class="btn text-left">Facebook</a>
+  						<div class="dropdown-divider"></div>
+   						<a href="https://www.sjogrens.org/" class="btn text-left ">Website</a>		
+ 				 	 </div>
+ 				 	</div>
+				</div>				
+            </div>
+        </div>
+    </div>
+   <nav class="navbar fixed-bottom navbar-primary bg-primary">
+         <a href="index.html" class="btn-lg">
+         <i class="fa fa-female fa-2x"></i>
+         </a>
+         <a href="history.html" class="btn-lg">
+         <i class="fa fa-line-chart fa-2x"></i>
+         </a>
+         <a href="notepad.html" class="btn-lg">
+         <i class="fa fa-pencil fa-2x"></i>
+         </a>
+         <a href="settings.html" class="btn-lg">
+         <i class="fa fa-gear fa-2x"></i>
+         </a>
+      </nav>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
