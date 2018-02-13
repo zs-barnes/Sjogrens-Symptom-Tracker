@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
     <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" type="text/css" href="css/settings.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
     <title>Sjögrens Symptom Tracker</title>
 </head>
 
@@ -36,7 +36,8 @@
   						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
   						<a href="https://www.facebook.com/SjogrensSyndromeFoundation/" class="btn text-left">Facebook</a>
   						<div class="dropdown-divider"></div>
-   						<a href="https://www.sjogrens.org/" class="btn text-left ">Website</a>		
+   						<a href="https://www.sjogrens.org/" class="btn text-left ">Website</a>	
+	
  				 	 </div>
  				 	</div>
 				</div>				
@@ -54,7 +55,7 @@
          <i class="fa fa-pencil fa-2x"></i>
          </a>
          <a href="settings.html" class="btn-lg">
-         <i class="fa fa-gear fa-2x"></i>
+         <i class="fa fa-gear fa-2x gray"></i>
          </a>
       </nav>
     <script type="text/javascript" src="cordova.js"></script>
