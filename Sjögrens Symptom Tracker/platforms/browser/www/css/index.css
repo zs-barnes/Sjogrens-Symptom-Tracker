@@ -1,14 +1,29 @@
 .fa{
     color:white;
 }
+<<<<<<< HEAD
+.fa:hover{
+    color:black;    
+}
+
+.table{
+    border-collapse: separate;
+    border-spacing: 0px 15px;
+}
+.fa{
+    color: white;
+=======
 
 .table{
     border-collapse: separate;
     border-spacing: 0px 3vh;
+>>>>>>> master
 }
 
 .fa:hover{
     color: slategray;
+<<<<<<< HEAD
+=======
 }
 
 .gray {
@@ -17,4 +32,5 @@
 .scroll-table{
     height: 80vh;
     overflow: scroll;
+>>>>>>> master
 }

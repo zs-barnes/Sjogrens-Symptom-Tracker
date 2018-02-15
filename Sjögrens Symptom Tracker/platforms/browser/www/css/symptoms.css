@@ -1,16 +1,22 @@
 body {
+<<<<<<< HEAD
+background: radial-gradient(#ffffff, #F0F8FF, #63c0f9);
+=======
 	background: radial-gradient(#ffffff, #F0F8FF, #63c0f9);
 }
 
 .container {
 	max-height: 150px;
 	overflow: auto;
+>>>>>>> master
 }
 
 h2, h3 {
    color: Black;
 }
 
+<<<<<<< HEAD
+=======
 .btn-prim { 
   color: #FFFFFF; 
   background-color: #3D94E0; 
@@ -57,6 +63,7 @@ fieldset[disabled] .btn-prim.active {
   background-color: #FFFFFF; 
 }
 
+>>>>>>> master
 .btn-pink { 
   color: #ffffff; 
   background-color: #F48FB1; 
@@ -155,14 +162,24 @@ fieldset[disabled] .btn-ppurple.active {
   border-color: #7e57c2; 
 }
 
+<<<<<<< HEAD
+btn-purple:hover, 
+=======
 .btn-purple:hover, 
+>>>>>>> master
 .btn-purple:focus, 
 .btn-purple:active, 
 .btn-purple.active, 
 .open .dropdown-toggle.btn-purple { 
+<<<<<<< HEAD
+  color: #ffffff; 
+  background-color: #49247A; 
+  border-color: #130269; 
+=======
   color: #FFFFFF; 
   background-color: #441C8A; 
   border-color: #7E57C2; 
+>>>>>>> master
 } 
  
 .btn-purple:active, 
@@ -186,6 +203,15 @@ fieldset[disabled] .btn-purple:active,
 .btn-purple.disabled.active, 
 .btn-purple[disabled].active, 
 fieldset[disabled] .btn-purple.active { 
+<<<<<<< HEAD
+  background-color: #611BBD; 
+  border-color: #130269; 
+} 
+ 
+.btn-purple .badge { 
+  color: #611BBD; 
+  background-color: #ffffff; 
+=======
   background-color: #7E57C2; 
   border-color: #7E57C2; 
 } 
@@ -193,6 +219,7 @@ fieldset[disabled] .btn-purple.active {
 .btn-purple .badge { 
   color: #7E57C2; 
   background-color: #FFFFFF; 
+>>>>>>> master
 }
 
 .btn-dblue { 
@@ -517,4 +544,7 @@ fieldset[disabled] .btn-red.active {
   color: #F44336; 
   background-color: #FFFFFF; 
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> master

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+.card{
+background: radial-gradient(#ffffff, #F0F8FF, #63c0f9);
+=======
 .container {
 	width: 99%;
     height: 20px;
@@ -12,4 +16,5 @@
 body {
 background: #63c0f9;
 /* background: #2FA4E7; */
+>>>>>>> master
 }
