@@ -1,0 +1,20 @@
+.fa{
+    color:white;
+}
+
+.table{
+    border-collapse: separate;
+    border-spacing: 0px 3vh;
+}
+
+.fa:hover{
+    color: slategray;
+}
+
+.gray {
+    color: slategray;
+}
+.scroll-table{
+    height: 80vh;
+    overflow: scroll;
+}

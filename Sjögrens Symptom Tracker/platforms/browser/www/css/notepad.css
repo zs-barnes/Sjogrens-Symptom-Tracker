@@ -1,0 +1,15 @@
+.container {
+	width: 99%;
+    height: 20px;
+    line-height: 20px;
+    resize: none;
+    margin-left: 2px;
+    position: relative;
+    padding: 0 2px;
+    outline: black;
+}
+
+body {
+background: #63c0f9;
+/* background: #2FA4E7; */
+}
