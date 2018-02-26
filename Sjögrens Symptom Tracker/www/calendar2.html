@@ -1,0 +1,32 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="msapplication-tap-highlight" content="no" />
+      <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+      <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+      <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+      <link rel="stylesheet" type="text/css" href="css/calendar2.css"/>
+</head>
+<body>
+    <h1 style="margin-bottom:-1.5rem">Calendar</h1>
+    <div class="container" id="responsive">
+        <div class="controls">
+            <p class="next label bg-primary" onclick="nextMonth()"><i class="fa fa-arrow-right"></i></p>
+            <p class="previous label bg-primary" onclick="previousMonth()"><i class="fa fa-arrow-left"></i></p>
+            <p id="current-month" class="label bold bg-primary">February</p>
+        </div>
+
+        <div class="calendar" id="calendar">
+        <!-- Calendar HTML output here -->
+        </div>
+    </div>
+    
+	 <script type="text/javascript" src="js/calendar2.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
