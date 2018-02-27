@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Symptom Tracker</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+        <!-- Make sure the following lines are included in your header. You need both of these! -->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="cordova_plugins.js"></script>
+
+        <script type="text/javascript">
+            
+            // This makes sure your device is ready (all loaded). It sets up
+            // a couple of functions, one for writing to the file and one for
+            // reading from the file. Make sure that you
+            // change the body tag below to <body onload="onLoad()">.
+            function onLoad() {
+                document.addEventListener('writeToFile', writeToFile, false);  
+                document.addEventListener('readFromFile', readFromFile, false);  
+            }
+            
+            // This handles the errors coming from writeToFile and readFromFile.
+            var errorHandler = function (fileName, e) {  
+                var msg = '';
+
+                switch (e.code) {
+                    case FileError.QUOTA_EXCEEDED_ERR:
+                        msg = 'Storage quota exceeded';
+                        break;
+                    case FileError.NOT_FOUND_ERR:
+                        msg = 'File not found';
+                        break;
+                    case FileError.SECURITY_ERR:
+                        msg = 'Security error';
+                        break;
+                    case FileError.INVALID_MODIFICATION_ERR:
+                        msg = 'Invalid modification';
+                        break;
+                    case FileError.INVALID_STATE_ERR:
+                        msg = 'Invalid state';
+                        break;
+                    default:
+                        msg = 'Unknown error';
+                        break;
+                };
+                console.log('Error (' + fileName + '): ' + msg);
+                // alert('Error (' + fileName + '): ' + msg);
+            }
+    
+            function writeToFile(fileName, data) {
+                // alert("writeToFile function: " + fileName + ", " + data);
+                window.resolveLocalFileSystemURL(cordova.file.dataDirectory, function (directoryEntry) {
+                    //alert ("directoryEntry function");
+                    directoryEntry.getFile(fileName, { create: true }, function (fileEntry) {
+                        //alert("file entry function");
+                        fileEntry.createWriter(function (fileWriter) {
+                            console.log("fileWriter function");
+                            fileWriter.onwriteend = function (e) {
+                                // for real-world usage, you might consider passing a success callback
+                                console.log('Write of file "' + fileName + '"" completed.');
+                            };
+
+                            fileWriter.onerror = function (e) {
+                                // you could hook this up with our global error handler, or pass in an error callback
+                                console.log('Write failed: ' + e.toString());
+                            };
+
+                            var blob = new Blob([data], { type: 'text/plain' });
+                            fileWriter.write(blob);
+                        }, errorHandler.bind(null, fileName));
+                    }, errorHandler.bind(null, fileName));
+                }, errorHandler.bind(null, fileName));
+            }
+
+
+            function readFromFile(fileName, cb) {
+                var pathToFile = cordova.file.dataDirectory + fileName;
+                //alert("reading from file: " + pathToFile);
+
+                window.resolveLocalFileSystemURL(pathToFile, function (fileEntry) {
+                    //alert("about to set up the reader 1");
+
+                    fileEntry.file(function (file) {
+                        //alert("about to set up the reader 2");
+                        var reader = new FileReader();
+
+                        reader.onloadend = function (e) {
+                            cb(this.result);
+                        };
+
+                        reader.readAsText(file);
+                    }, errorHandler.bind(null, fileName));
+                }, errorHandler.bind(null, fileName));
+            }
+            // The next line of code is a test. It writes the word "cute!" to the file name
+            // testing123.txt.
+            // writeToFile('testing123.txt', 'cute!'); 
+
+     </script>
+    </head>
+    <body onload="onLoad()">
+
+        <div id="container">
+            <p>File Read/Write Test</p>
+            <p></p>
+            <form action="">
+                First name: <input type="text" id="fName"><br>
+                <script>
+                     // The next line calls readFromFile and reads the data from the file.
+                    readFromFile('testing123.txt', function (data) {
+                        alert("reading from file" + data);
+                        document.getElementById('fName').value = data;
+                    });
+                </script>
+                Last name: <input type="text" id="lName"><br>
+                <input type=button value="Read/Write Test" onClick="writeToFile('testing123.txt',document.getElementById('fName').value)">
+            </form>
+        </div>
+
+    </body>
+</html>
