@@ -1,5 +1,8 @@
 body {
+/* 
     background-image: url('http://i68.tinypic.com/hs2qsi.png');
+ */
+ 	background: url(../img/teardrop4.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;

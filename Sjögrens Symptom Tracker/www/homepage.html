@@ -12,66 +12,51 @@
       <title>Sjögrens Symptom Tracker</title>
    </head>
    <body>    
-    <div class="navbar-header navbar-primary bg-primary text-center">
+    <div class="navbar-header navbar-dark bg-primary text-center">
+    <a href="calendar.html"> <i class="fa fa-calendar fa-2x"></i> </a>
       <h1>Symptoms</h1>
-    </div>
-    <div class="scroll-table">
-    <table class="table table-hover text-center">
-        <thead>
-          <tr>
-            <th scope="col">Symptom</th>
-            <th scope="col">Morning</th>
-            <th scope="col">Afternoon</th>
-            <th scope="col">Evening</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="table-primary text-center">
-            <th scope="row">Dry Eyes</th>
-            <td><button type="button" class="btn btn-outline-success"><a href="symptoms.html">M</a></button></td>
-            <td><button type="button" class="btn btn-outline-warning"><a href="symptoms.html">A</a></button></td>
-            <td><button type="button" class="btn btn-outline-danger"><a href="symptoms.html">E</a></button>
-            </td>
-          </tr>
-          <tr class="table-primary text-center">
-            <th scope="row">Dry Mouth</th>
-            <td><button type="button" class="btn btn-outline-success"><a href="symptoms.html">M</a></button></td>
-            <td><button type="button" class="btn btn-outline-warning"><a href="symptoms.html">A</a></button></td>
-            <td><button type="button" class="btn btn-outline-danger"><a href="symptoms.html">E</a></button>
-            </td>
-          </tr>
-          <tr class="table-primary text-center">
-            <th scope="row">Joint Pain</th>
-            <td><button type="button" class="btn btn-outline-success"><a href="symptoms.html">M</a></button></td>
-            <td><button type="button" class="btn btn-outline-warning"><a href="symptoms.html">A</a></button></td>
-            <td><button type="button" class="btn btn-outline-danger"><a href="symptoms.html">E</a></button>
-            </td>
-          </tr>
-          <tr class="table-primary text-center">
-            <th scope="row">Digestion</th>
-            <td><button type="button" class="btn btn-outline-success"><a href="symptoms.html">M</a></button></td>
-            <td><button type="button" class="btn btn-outline-warning"><a href="symptoms.html">A</a></button></td>
-            <td><button type="button" class="btn btn-outline-danger"><a href="symptoms.html">E</a></button>
-            </td>
-          </tr>
-          <tr class="table-primary text-center">
-            <th scope="row">Fatigue</th>
-            <td><button type="button" class="btn btn-outline-success"><a href="symptoms.html">M</a></button></td>
-            <td><button type="button" class="btn btn-outline-warning"><a href="symptoms.html">A</a></button></td>
-            <td><button type="button" class="btn btn-outline-danger"><a href="symptoms.html">E</a></button>
-            </td>
-          </tr>
-          <tr class="table-primary text-center">
-            <th scope="row"><i class="fa fa-plus fa-2x gray"></i></th>
-            <td><button type="button" class="btn btn-outline-success"><a href="symptoms.html">M</a></button></td>
-            <td><button type="button" class="btn btn-outline-warning"><a href="symptoms.html">A</a></button></td>
-            <td><button type="button" class="btn btn-outline-danger"><a href="symptoms.html">E</a></button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-    </div>
+  </div>
+    
+      <div class="list-group-flush">
+        <a href="#" class="list-group-item list-group-item-primary list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Dry Eyes</h5>
+            <small>3 days ago</small>
+          </div>
+          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+          <small>Donec id elit non mi porta.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-primary list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Dry Mouth</h5>
+            <small>3 days ago</small>
+          </div>
+          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+          <small>Donec id elit non mi porta.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-primary list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Fatigue</h5>
+            <small>3 days ago</small>
+          </div>
+          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+          <small>Donec id elit non mi porta.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-primary list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Joint Pain</h5>
+            <small>3 days ago</small>
+          </div>
+          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+          <small>Donec id elit non mi porta.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-primary list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Add a new symptom <i class="fa fa-plus gray"></i></h5>
+          </div>
+          <p class="mb-1">Click here to add a new symptom</p>
+        </a>
+      </div>
       <nav class="navbar fixed-bottom navbar-primary bg-primary">
          <a href="homepage.html" class="btn-lg">
          <i class="fa fa-stethoscope fa-2x gray"></i>
@@ -85,8 +70,6 @@
          <a href="settings.html" class="btn-lg">
          <i class="fa fa-gear fa-2x"></i>
          </a>
-         <a href="calendar.html" class="btn-lg">
-         <i class="fa fa-calendar fa-2x"></i>
       </nav>
       <script type="text/javascript" src="cordova.js"></script>
       <script type="text/javascript" src="js/homepage.js"></script>

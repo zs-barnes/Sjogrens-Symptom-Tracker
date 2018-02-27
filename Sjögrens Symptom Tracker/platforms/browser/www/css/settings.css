@@ -1,3 +1,4 @@
+/* new */
 body{
     background-color:  #F0F8FF;
 	padding:26px;  
@@ -16,7 +17,7 @@ body{
 	font-weight: 400;
 	font-family: inherit;	
 	margin-top: 160px;
-	width:100px;
+	width:30%;
 	padding:15px;
 }
 h1{
@@ -35,7 +36,9 @@ padding:0px;
 .dropdown-menu{
  position: absolute;
 right: 0;
-margin-left:165px;
+font-size:1rem;
+margin-left:260px;
+padding:30px;
 }
 .container{
 margin-top: 50px;
@@ -44,28 +47,27 @@ position: absolute;
 left:0;
 max-height: 600px;
 }
-
 .fa-user-circle-o{
-margin-left:188px;
+margin-left:350px;
 }
 
 .fa-envelope{
-margin-left:200px;
+margin-left:371px;
 }
 
 .fa-question-circle{
-margin-left:180px;
+margin-left:343px;
 }
 
 .fa-globe{
-margin-left:142px;
+margin-left:283px;
 }
 
 .fa-internet-explorer {
-margin-left:23px;
+margin-left:77px;
 color:blue;
 }
 .fa-facebook-square{
-margin-left:12px;
+margin-left:66px;
 color:blue;
 }
