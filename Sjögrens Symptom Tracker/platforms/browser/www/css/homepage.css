@@ -18,3 +18,14 @@
     height: 80vh;
     overflow: scroll;
 }
+
+.fa-calendar {
+	float: right;
+	margin-right: 3.5px;
+	margin-top: 5px;
+}
+
+h1 {
+padding-left: 33px;
+}
+

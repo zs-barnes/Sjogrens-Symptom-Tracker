@@ -12,34 +12,61 @@
       <link rel="stylesheet" type="text/css" href="css/notepad.css">
 
       <title>Sjögrens Symptom Tracker</title>
+      
       <script>  
       window.onload = function()
 	{
 		document.addEventListener("deviceready", init, false);
 	}
+	
 	function init()
 	{
 		document.getElementById("btnSave").addEventListener("click",saveData, false);
 		document.getElementById("btnGet").addEventListener("click", getData, false);
 	}
+	
 	function saveData()
 	{
 		var notes = document.getElementById("notes").value;
 		window.localStorage.setItem("note", notes);
 		alert("Your data is stored successfulfy");
 	}
+	
 	function getData()
 	{
 		var output = "Saved notes:  " +
 					  window.localStorage.getItem("note") 
 		document.getElementById("result").innerHTML = output;
 	}
+	
+	function convertToString()
+	{
+	var obj = { "note"};
+	var myJSON = JSON.stringify(obj);
+	document.getElementById("notes").innerHTML = myJSON;
+	}
+	
+	function download(filename, text) {
+	  var element = document.createElement('a');
+	  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+	  element.setAttribute('download', filename);
+
+	  element.style.display = 'none';
+	  document.body.appendChild(element);
+
+	  element.click();
+
+	  document.body.removeChild(element);
+	}
+</script>
+	
 	</script>
    </head>
     <body>
             <div class ="container">
             <div class="navbar-header navbar-primary bg-primary text-center">
-                <h1>Notepad</h1>
+			 <a href="calendar.html"> <i class="fa fa-calendar fa-2x"></i> </a>
+              <h1>Notepad</h1> 
             </div>
             <div class="navbar-header navbar-primary bg-primary text-center">
 			<textarea class="form-control" rows="11" id="notes" placeholder="Enter your note here"></textarea>
