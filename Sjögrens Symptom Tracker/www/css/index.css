@@ -8,10 +8,6 @@ body {
     background-size: cover;
     background-color: #464646;
 }
-<<<<<<< HEAD
-.fa:hover{
-    color:black;    
-}
 
 .btn {
     border-radius 20px;
@@ -25,23 +21,18 @@ body {
 	font-size: 25px;
 	white-space: normal;
 
-.table{
-    border-collapse: separate;
-    border-spacing: 0px 3vh;
->>>>>>> master
 }
 
-.fa:hover{
-    color: slategray;
-<<<<<<< HEAD
-=======
+.flash {
+   animation-name: flash;
+    animation-duration: 0.9s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
 }
 
-.gray {
-    color: slategray;
-}
-.scroll-table{
-    height: 80vh;
-    overflow: scroll;
->>>>>>> master
+@keyframes flash {
+    from {color: black;}
+    to {color: white;}
 }
