@@ -1,22 +1,94 @@
 <!DOCTYPE html>
 <html>
    <head>
- <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  	<link rel="stylesheet" type="text/css" href="css/loading.css">
-  </head>
-  <body>
-	<div style="text-align:center;margin:auto">
-<!-- 
-	<a href="homepage.html"> <input type="submit" class="btn btn-primary btn-lg flash" value="Touch to Start"> </a>
- -->
-<a href="signup.html"> <input type="button" class="btn btn-primary btn-lg flash" value="Sign Up"> </a>
-<!-- 
-	<a href="login.html"> <input type="button" class="btn btn-primary" value="Log In"> </a> 
- -->
+      <meta charset="utf-8" />
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="msapplication-tap-highlight" content="no" />
+      <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+      <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+      <link rel="stylesheet" type="text/css" href="css/index.css" />
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+      <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+      <title>Sjögrens Symptom Tracker</title>
+   </head>
+   <body>    
+    <div class="navbar-header navbar-primary bg-primary text-center">
+      <h1>Symptoms</h1>
+    </div>
+    <div class="scroll-table">
+    <table class="table table-hover text-center">
+        <thead>
+          <tr>
+            <th scope="col">Symptom</th>
+            <th scope="col">Morning</th>
+            <th scope="col">Afternoon</th>
+            <th scope="col">Evening</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-primary text-center">
+            <th scope="row">Dry Eyes</th>
+            <td><button type="button" class="btn btn-outline-success"><a href="symptoms.html">M</a></button></td>
+            <td><button type="button" class="btn btn-outline-warning"><a href="symptoms.html">A</a></button></td>
+            <td><button type="button" class="btn btn-outline-danger"><a href="symptoms.html">E</a></button>
+            </td>
+          </tr>
+          <tr class="table-primary text-center">
+            <th scope="row">Dry Mouth</th>
+            <td><button type="button" class="btn btn-outline-success"><a href="symptoms.html">M</a></button></td>
+            <td><button type="button" class="btn btn-outline-warning"><a href="symptoms.html">A</a></button></td>
+            <td><button type="button" class="btn btn-outline-danger"><a href="symptoms.html">E</a></button>
+            </td>
+          </tr>
+          <tr class="table-primary text-center">
+            <th scope="row">Joint Pain</th>
+            <td><button type="button" class="btn btn-outline-success"><a href="symptoms.html">M</a></button></td>
+            <td><button type="button" class="btn btn-outline-warning"><a href="symptoms.html">A</a></button></td>
+            <td><button type="button" class="btn btn-outline-danger"><a href="symptoms.html">E</a></button>
+            </td>
+          </tr>
+          <tr class="table-primary text-center">
+            <th scope="row">Digestion</th>
+            <td><button type="button" class="btn btn-outline-success"><a href="symptoms.html">M</a></button></td>
+            <td><button type="button" class="btn btn-outline-warning"><a href="symptoms.html">A</a></button></td>
+            <td><button type="button" class="btn btn-outline-danger"><a href="symptoms.html">E</a></button>
+            </td>
+          </tr>
+          <tr class="table-primary text-center">
+            <th scope="row">Fatigue</th>
+            <td><button type="button" class="btn btn-outline-success"><a href="symptoms.html">M</a></button></td>
+            <td><button type="button" class="btn btn-outline-warning"><a href="symptoms.html">A</a></button></td>
+            <td><button type="button" class="btn btn-outline-danger"><a href="symptoms.html">E</a></button>
+            </td>
+          </tr>
+          <tr class="table-primary text-center">
+            <th scope="row"><i class="fa fa-plus fa-2x gray"></i></th>
+            <td><button type="button" class="btn btn-outline-success"><a href="symptoms.html">M</a></button></td>
+            <td><button type="button" class="btn btn-outline-warning"><a href="symptoms.html">A</a></button></td>
+            <td><button type="button" class="btn btn-outline-danger"><a href="symptoms.html">E</a></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
-	</div>
-	 </body>
+    </div>
+      <nav class="navbar fixed-bottom navbar-primary bg-primary">
+         <a href="index.html" class="btn-lg">
+         <i class="fa fa-female fa-2x gray"></i>
+         </a>
+         <a href="history.html" class="btn-lg">
+         <i class="fa fa-line-chart fa-2x"></i>
+         </a>
+         <a href="notepad.html" class="btn-lg">
+         <i class="fa fa-pencil fa-2x"></i>
+         </a>
+         <a href="settings.html" class="btn-lg">
+         <i class="fa fa-gear fa-2x"></i>
+         </a>
+      </nav>
+      <script type="text/javascript" src="cordova.js"></script>
+      <script type="text/javascript" src="js/index.js"></script>
+      <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+   </body>
 </html>

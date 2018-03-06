@@ -6,92 +6,46 @@
       <meta name="msapplication-tap-highlight" content="no" />
       <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
       <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-      <link rel="stylesheet" type="text/css" href="css/homepage.css" />
+      <link rel="stylesheet" type="text/css" href="css/index.css" />
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
       <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
       <link rel="stylesheet" type="text/css" href="css/notepad.css">
 
       <title>Sjögrens Symptom Tracker</title>
-      
-      <script>  
-      window.onload = function()
-	{
-		document.addEventListener("deviceready", init, false);
-	}
-	
-	function init()
-	{
-		document.getElementById("btnSave").addEventListener("click",saveData, false);
-		document.getElementById("btnGet").addEventListener("click", getData, false);
-	}
-	
-	function saveData()
-	{
-		var notes = document.getElementById("notes").value;
-		window.localStorage.setItem("note", notes);
-		alert("Your data is stored successfulfy");
-	}
-	
-	function getData()
-	{
-		var output = "Saved notes:  " +
-					  window.localStorage.getItem("note") 
-		document.getElementById("result").innerHTML = output;
-	}
-	
-	function convertToString()
-	{
-	var obj = { "note"};
-	var myJSON = JSON.stringify(obj);
-	document.getElementById("notes").innerHTML = myJSON;
-	}
-	
-	function download(filename, text) {
-	  var element = document.createElement('a');
-	  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-	  element.setAttribute('download', filename);
-
-	  element.style.display = 'none';
-	  document.body.appendChild(element);
-
-	  element.click();
-
-	  document.body.removeChild(element);
-	}
-</script>
-	
-	</script>
    </head>
-    <body>
+   <body>
+   		    <!-- <div class="col-md-3">
+                    <div class="card text-center">
+                        <i class="fa fa-pencil fa-2x"></i>
+                        <h3>Notepad</h3>
+                        <textarea class="form-control" rows="21" id="comment"></textarea>
+                        <input type="submit" class="btn btn-info" value="Save">
+                    </div>
+            </div> -->
             <div class ="container">
             <div class="navbar-header navbar-primary bg-primary text-center">
-			 <a href="calendar.html"> <i class="fa fa-calendar fa-2x"></i> </a>
-              <h1>Notepad</h1> 
-            </div>
-            <div class="navbar-header navbar-primary bg-primary text-center">
-			<textarea class="form-control" rows="11" id="notes" placeholder="Enter your note here"></textarea>
-			 <a href="homepage.html"> <input type="submit" id="btnSave" class="btn btn-info" value="Save"> </a>
-			 <button class="btn btn-info" id="btnGet">Get Data</button><br/>
-        <div id="result"></div>
+                <h1>Notepad</h1>
+			<textarea class="form-control" rows="22" id="comment" placeholder="Enter your note here"></textarea>
+			 <a href="index.html"> <input type="submit" class="btn btn-info" value="Save"> </a>
        	 </div>
        	 </div>
 
      <nav class="navbar fixed-bottom navbar-primary bg-primary">
-         <a href="homepage.html" class="btn-lg">
-         <i class="fa fa-stethoscope fa-2x"></i>
+         <a href="index.html" class="btn-lg">
+         <i class="fa fa-female fa-2x"></i>
          </a>
          <a href="history.html" class="btn-lg">
          <i class="fa fa-line-chart fa-2x"></i>
          </a>
          <a href="notepad.html" class="btn-lg">
-         <i class="fa fa-pencil fa-2x gray"></i>
+         <i class="fa fa-pencil fa-2x"></i>
          </a>
          <a href="settings.html" class="btn-lg">
          <i class="fa fa-gear fa-2x"></i>
          </a>
       </nav>
       <script type="text/javascript" src="cordova.js"></script>
-      <script type="text/javascript" src="js/homepage.js"></script>
+      <script type="text/javascript" src="js/index.js"></script>
       <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
       <script type="text/javascript" src="js/bootstrap.min.js"></script>
    </body>

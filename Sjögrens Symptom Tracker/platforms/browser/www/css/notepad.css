@@ -1,28 +1,20 @@
-.container !important {
+<<<<<<< HEAD
+.card{
+background: radial-gradient(#ffffff, #F0F8FF, #63c0f9);
+=======
+.container {
+	width: 99%;
+    height: 20px;
     line-height: 20px;
     resize: none;
     margin-left: 2px;
     position: relative;
     padding: 0 2px;
-    display: inline-block;
-    background-size: contain ;
-    
+    outline: black;
 }
 
-.form-control {
-	color: white !important;
-	font-size: 30px !important;
-	max-width:120%;
+body {
+background: #63c0f9;
+/* background: #2FA4E7; */
+>>>>>>> master
 }
-
-.btn {
-	background: white !important;
-	color: black !important;
-	border: #2196F3 !important;
-	outline: #2196F3 !important;
-}
-
-input[type="text"] {
-	width: 25%;
-}
-
