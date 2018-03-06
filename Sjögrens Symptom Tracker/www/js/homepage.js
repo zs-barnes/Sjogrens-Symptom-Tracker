@@ -17,6 +17,14 @@ $(document).ready(function(){
 		removeTask(id);
 	});
 
+	// Note task event
+	//on the click event we call the element ('#popup-task')
+	$('#task-table').on('click','#popup-task', function(){
+		comment = $(this).data('task_comment');
+		popupNote(comment);
+	});
+
+
 	// Clear tasks event
 	$('#clear-tasks').on('click', function(){
 		clearAllTasks();
@@ -30,7 +38,7 @@ $(document).ready(function(){
 
 		// Sort Tasks
 		if(taskList != null){
-			taskList = taskList.sort(sortByTime);
+			taskList = taskList.sort(sortByDate);
 		}
 
 		// Set Counter
@@ -44,19 +52,25 @@ $(document).ready(function(){
 										'<td>' + value.task_priority + '</td>' +
 										'<td>' + value.task_date + '</td>' +
 										'<td>' + value.task_time + '</td>' +
-										'<td><a href="edit.html?id='+ value.id +'">Edit</a> | <a href="#" id="remove-task" data-id="'+ value.id +'">Remove</a></td>' +
+										'<td><a href="edit.html?id='+ value.id +'">Edit</a> | <a href="#" id="remove-task" data-id="'+ value.id +'">Remove</a> | <a href="#" id="popup-task" data-id="'+ value.id +'">Note</a></td>' +
 										'</tr>');
 			})
 		}
 	}
 
-	// Function to sort tasks
+	// Function to sort tasks by time in descending order
 	function sortByTime(a, b){
 		var aTime = a.task_time;
 		var bTime = b.task_time;
 		return ((aTime < bTime) ? -1 : ((aTime > bTime) ? 1 : 0));
 	}
-
+	
+	// Function to sort tasks by date in ascending order
+	function sortByDate(a, b){
+		var aDate = a.task_date;
+		var bDate = b.task_date;
+		return ((aDate > bDate) ? -1 : ((aDate < bDate) ? 1 : 0));
+	}
 
 	// Function to add a task
 	function addTask(e){
@@ -68,10 +82,12 @@ $(document).ready(function(){
 		var task_priority = $('#priority').val();
 		var task_date = $('#date').val();
 		var task_time = $('#time').val();
+		var task_comment = $('#comment').val();
+
 
 		// Simple Validation
 		if(task == ''){
-			alert('Task is required');
+			alert('Symptom is required');
 			e.preventDefault();
 		} else if(task_date == '') {
 			alert('Date is required');
@@ -81,6 +97,8 @@ $(document).ready(function(){
 			e.preventDefault();
 		} else if(task_priority == ''){
 			task_priority = 'normal';
+		} else if(task_comment == ''){
+			task_comment = 'normal';
 		} else {
 			tasks = JSON.parse(localStorage.getItem('tasks'));
 
@@ -97,16 +115,24 @@ $(document).ready(function(){
 				"task": task,
 				"task_priority": task_priority,
 				"task_date": task_date,
-				"task_time": task_time
+				"task_time": task_time,
+				"task_comment": task_comment
+	
 			}
 
 			tasks.push(new_task);
 			localStorage.setItem('tasks', JSON.stringify(tasks));
 
-			console.log('Task Added');
+			console.log('Symptom Added');
 		}
 	}
 
+	function popupNote(){
+		var task_comment = $('#comment').val();
+
+		var input = localStorage.getItem('tasks');
+		alert(input);
+	}
 
 	// Function to update tasks
 	function updateTask(e){
@@ -115,6 +141,8 @@ $(document).ready(function(){
 		var task_priority = $('#priority').val();
 		var task_date = $('#date').val();
 		var task_time = $('#time').val();
+		var task_time = $('#comment').val();
+
 
 		taskList = JSON.parse(localStorage.getItem('tasks'));
 
@@ -127,7 +155,7 @@ $(document).ready(function(){
 
 		// Simple Validation
 		if(task == ''){
-			alert('Task is required');
+			alert('Symptom is required');
 			e.preventDefault();
 		} else if(task_date == '') {
 			alert('Date is required');
@@ -137,6 +165,8 @@ $(document).ready(function(){
 			e.preventDefault();
 		} else if(task_priority == ''){
 			task_priority = 'normal';
+		} else if(task_comment == ''){
+			task_comment = 'normal';
 		} else {
 			tasks = JSON.parse(localStorage.getItem('tasks'));
 
@@ -153,7 +183,9 @@ $(document).ready(function(){
 				"task": task,
 				"task_priority": task_priority,
 				"task_date": task_date,
-				"task_time": task_time
+				"task_time": task_time,
+				"task_comment": task_comment
+
 			}
 
 			tasks.push(new_task);
@@ -163,7 +195,7 @@ $(document).ready(function(){
 
 	// Function to remove task
 	function removeTask(id){
-		if(confirm('Are you sure you want to delete this task?')){
+		if(confirm('Are you sure you want to delete this symptom?')){
 			var taskList = JSON.parse(localStorage.getItem('tasks'));
 			for(var i=0; i < taskList.length; i++){
 			if(taskList[i].id == id){
@@ -201,6 +233,7 @@ function getTask(){
 			$('#edit-task-form #priority').val(taskList[i].task_priority);
 			$('#edit-task-form #date').val(taskList[i].task_date);
 			$('#edit-task-form #time').val(taskList[i].task_time);
+			$('#edit-task-form #comment').val(taskList[i].task_comment);
 		}
 	}
 }
@@ -219,3 +252,4 @@ function getQueryParams(qs) {
 
     return params;
 }
+
