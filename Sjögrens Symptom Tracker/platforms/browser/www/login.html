@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+         <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <link rel="stylesheet" type="text/css" href="css/homepage.css" />
+        <link rel="stylesheet" type="text/css" href="css/login.css" />
+    	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+        <title>Local Data Storage</title>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="functions.js"></script>
+       <script>
+            window.onload = function()
+            {
+                document.addEventListener("deviceready", init, false);
+            }
+            //Couldn't get it to work 
+            function check(form)
+            {
+            	if (form.userid.value == "window.localStorage.getItem(uname)" && form.passwrd.value == "window.localStorage.getItem(pass)")
+            	{
+            		window.open('homepage.html')
+            	}
+            	else
+            	{
+            	  alert("Incorrect Password or Username. Please Try Again")
+            	  }
+            	}
+            	
+        </script>
+    </head>
+    <body>
+    <div class="navbar-header navbar-primary bg-primary text-center" style="color:white">
+                            <h1>Account Login</h1>
+    </div> 
+    <div>
+     <h2 style="margin-top:50px;"> Login </h2>
+     <div class="container text-left">
+        Username:<input type="text" id="userid"  placeholder="Enter username"/><br />
+        Password:<input type="password" id="passwrd"  placeholder="Enter password" style="margin-bottom:50px;"/>     
+        <a href="index.html"><button class="btn btn-block btn-primary cancel-btn text-center" style= "width:50%;
+ margin-top:50px;">Cancel</button></a>   
+   <a href="homepage.html"><button class="btn btn-block btn-primary login-btn text-center" style="width:50%;
+ margin-top:50px;">Login</button></a>     
+    </div>
+    </body>
+</html>

@@ -1,8 +1,7 @@
 body {
-/* 
     background-image: url('http://i68.tinypic.com/hs2qsi.png');
- */
- 	background: url(../img/teardrop4.png);
+
+/*  	background: url(../img/teardrop4.png); */
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -12,7 +11,7 @@ body {
 
 .btn {
     border-radius 20px;
-	font-weight: 400;
+	font-weight: 400px;
 	font-family: inherit;	
 	margin-top: 500px;
 	width:100px;

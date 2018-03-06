@@ -10,62 +10,30 @@
     	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
     	<link rel="stylesheet" type="text/css" href="css/signup.css"/>
-    	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-
+    	
         <title>Local Data Storage</title>
         <script type="text/javascript" src="cordova.js"></script>
-        <script>
-            window.onload = function()
-            {
-                document.addEventListener("deviceready", init, false);
-            }
-            function init()
-            {
-                document.getElementById("btnSave").addEventListener("click",saveData, false);
-                document.getElementById("btnGet").addEventListener("click", getData, false);
-            }
-            function saveData()
-            {
-                var username = document.getElementById("username").value;
-                var password = document.getElementById("pw").value;
-                window.localStorage.setItem("uname", username);
-                window.localStorage.setItem("pass", password);
-                alert("Your data is stored successfuly");
-            }
-            function hideinfo()
-            {
-            	var input = document.getElementById("pw");
-            	if (input.type === "password"){
-            		input.type = "text";
-            	}
-            	else {
-            	 input.type = "password";
-            	 }
-            }
-            function getData()
-            {
-                var output = "Your user name is " +
-                              window.localStorage.getItem("uname") +
-                              " and your password is " +
-                              window.localStorage.getItem("pass");
-                document.getElementById("result").innerHTML = output;
-            }
-        </script>
     </head>
     <body>
     <div class="navbar-header navbar-primary bg-primary text-center">
                             <h1>Sign Up</h1>
     </div> 
     <div>
-    <i class="fa fa-user-circle-o fa-5x" style="margin-bottom:40px;"></i></div>
-     <h2> Create an Account </h2>
+     <h2 style="text-align:left;margin-bottom:30px"> Create an Account: </h2>
      <div class="container text-left">
         Username:<input type="text" id="username"  placeholder="Enter username"/><br />
         Password:<input type="password" id="pw"  placeholder="Enter password" style="margin-bottom:50px;"/><br>
-        <input type="checkbox" onclick="hideinfo()" style="margin-right:10px;">Display Password 
+        <input type="checkbox" onclick="window.hideinfo()" style="margin-right:10px;">Display Password 
         <div id="result"></div>
          <a href="index.html"><button class="btn btn-block btn-primary cancel-btn text-center">Cancel</button></a>
-         <a href="homepage.html"><button id="btnSave" class="btn btn-block btn-primary" style="width:50%;margin-top:50px;">Save Data</button></a><br />
+         <a href="login.html"><button id="btnSave" class="btn btn-block btn-primary" style="width:50%;margin-top:50px;">Save Data</button></a><br />
     </div>
+    <script type="text/javascript" src="js/functions.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+      <script type="text/javascript" src="js/homepage.js"></script>
+      <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
     </body>
 </html>
