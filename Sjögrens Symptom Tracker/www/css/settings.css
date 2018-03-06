@@ -1,4 +1,3 @@
-/*new*/
 body{
     background-color:  #F0F8FF;
 	padding:26px;  
@@ -16,7 +15,7 @@ body{
 	border-radius 20px;
 	font-weight: 400;
 	font-family: inherit;	
-	margin-top: 140px;
+	margin-top: 180px;
 	width:100px;
 	padding:15px;
 }
@@ -36,7 +35,7 @@ padding:0px;
 .dropdown-menu{
  position: absolute;
 right: 0;
-margin-left:160px;
+margin-right:160px;
 }
 .container{
 margin-top: 50px;

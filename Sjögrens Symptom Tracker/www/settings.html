@@ -1,14 +1,13 @@
 <!DOCTYPE html> <!--final-->
 <html>
-
 <head>
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-    
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
+     <link rel="stylesheet" type="text/css" href="css/homepage.css" />
+    <link rel="stylesheet" type="text/css" href="css/settings.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
     <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
@@ -30,31 +29,38 @@
                              Profile</a>
                              <a href="addprofile.html" style="margin-left:118px;color:white;">Create</a><a>/</a>
                              <a href ="editprofile.html" style="color:white;">Edit</a></button>
-                          <a href="faq.html" style="width:100%"> <button class="btn btn-block btn-primary text-left"> FAQs 
-                           <i class="fa fa-question-circle fa-2x fa-fw"> </i></button> </a>
+                            <a href="faq.html" style="width:100%"><button class="btn btn-block btn-primary text-left">FAQs<i class="fa fa-question-circle fa-2x fa-fw"></i></button></a>
                            <!-- <a href="faq.html"><button type="button" class="btn btn-primary text-left">
                             FAQs<i class="fa fa-question-circle fa-2x fa-fw"></i></button> </a> -->
-						
+						    <!-- 
+<button class="btn btn-primary dropdown-toggle text-left" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+  						Testing
+  						<i class="fa fa-globe fa-2x fa-fw"></i>
+ -->
 						<div class="dropdown">
   						<button class="btn btn-primary dropdown-toggle text-left" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
   						About Us
   						<i class="fa fa-globe fa-2x fa-fw"></i>
+  						 <span class="caret"></span>
  						</button>
-  						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-  						<a href="#" onclick ="window.open('https://www.facebook.com/146139558757483','_system');" class="btn text-left" style="padding:10px;">Facebook
-  						<i class="fa fa-facebook-square fa-2x fa-fw"></i></a>
+  						<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+  						<li><a href="#" onclick ="window.open('https://www.facebook.com/146139558757483','_system');" class="text-left" style="padding:10px;">Facebook
+  						<i class="fa fa-facebook-square fa-2x fa-fw"></i></a></li>
   						<div class="dropdown-divider"></div>
-  						<a href="#" onclick="window.open('https://www.sjogrens.org', '_system');" class="btn text-left" style="padding:10px;">Website
-  						<i class="fa fa-internet-explorer fa-2x fa-fw"></i></a>	
- 				 	  </div>
+  						<li><a href="#" onclick="window.open('https://www.sjogrens.org', '_system');" class="text-left" style="padding:10px;">Website
+  						<i class="fa fa-internet-explorer fa-2x fa-fw"></i></a></li>
+ 				 	  </ul>
+ 			            
  				 	</div>
 			   	</div>	
             </div>
+            
+             <a href="homepage.html"><button class="btn btn-block btn-primary back-btn text-center">Back</button></a>	
     </div>
     
    <nav class="navbar fixed-bottom navbar-primary bg-primary">
-         <a href="index.html" class="btn-lg">
-         <i class="fa fa-female fa-2x"></i>
+         <a href="homepage.html" class="btn-lg">
+         <i class="fa fa-stethoscope fa-2x"></i>
          </a>
          <a href="history.html" class="btn-lg">
          <i class="fa fa-line-chart fa-2x"></i>
@@ -63,7 +69,7 @@
          <i class="fa fa-calendar fa-2x"></i>
          </a>
          <a href="settings.html" class="btn-lg">
-         <i class="fa fa-gear fa-2x"></i>
+         <i class="fa fa-gear fa-2x gray"></i>
          </a>
       </nav>
       <script type="text/javascript" src="cordova.js"></script>
