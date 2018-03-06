@@ -198,7 +198,8 @@ button::-moz-focus-inner {
     border-radius: 12%;
 }
 .mfp-close:hover, .mfp-close:focus {
-    opacity: 1; }
+    opacity: 1; 
+}
 
 .mfp-close-btn-in .mfp-close {
     color: #FFFFFF;

@@ -1,5 +1,4 @@
-<!DOCTYPE html> <!--new-->
-
+<!DOCTYPE html> <!--final-->
 <html>
 
 <head>
@@ -19,24 +18,26 @@
 </head>
 
 <body>
-<div class="navbar-header navbar-primary bg-primary text-center">
-                            <h1>Settings</h1>
-                            </div>                   		
+<div class="navbar-header navbar-primary bg-primary text-center" style="color:white">
+          <h1>Settings</h1>
+	</div>                   		
  <div class="row equal h-100">
                 <!--<div class="col-md-12">-->
-                <div class="container">
+                <div class="container" style="overflow-y: hidden">
                         <div class="card">
                             <div class="btn-group-vertical btn-group-justified" style="font-size: 1rem;">
-                            <button type="button" class="btn btn-primary text-left" onclick="background-color:red;">
-                             Profile  <i class="fa fa-user-circle-o fa-2x fa-fw"></i></button>
-                            <button type="button" class="btn btn-primary text-left">
-                            Email<i class="fa fa-envelope fa-2x fa-fw"></i></button>
-                            <button type="button" class="btn btn-primary text-left">
-                            Support<i class="fa fa-question-circle fa-2x fa-fw"></i></button>   
-	
+                            <button type="button" class="btn btn-primary text-left" style="color:white">
+                             Profile</a>
+                             <a href="addprofile.html" style="margin-left:118px;color:white;">Create</a><a>/</a>
+                             <a href ="editprofile.html" style="color:white;">Edit</a></button>
+                          <a href="faq.html" style="width:100%"> <button class="btn btn-block btn-primary text-left"> FAQs 
+                           <i class="fa fa-question-circle fa-2x fa-fw"> </i></button> </a>
+                           <!-- <a href="faq.html"><button type="button" class="btn btn-primary text-left">
+                            FAQs<i class="fa fa-question-circle fa-2x fa-fw"></i></button> </a> -->
+						
 						<div class="dropdown">
   						<button class="btn btn-primary dropdown-toggle text-left" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-  						Social Media 
+  						About Us
   						<i class="fa fa-globe fa-2x fa-fw"></i>
  						</button>
   						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -49,8 +50,6 @@
  				 	</div>
 			   	</div>	
             </div>
-            <a href="index.html"><button class="btn btn-block btn-primary back-btn text-center">Back</button></a>
-        </div>
     </div>
     
    <nav class="navbar fixed-bottom navbar-primary bg-primary">
@@ -60,17 +59,17 @@
          <a href="history.html" class="btn-lg">
          <i class="fa fa-line-chart fa-2x"></i>
          </a>
-         <a href="notepad.html" class="btn-lg">
-         <i class="fa fa-pencil fa-2x"></i>
+         <a href="calendar.html" class="btn-lg">
+         <i class="fa fa-calendar fa-2x"></i>
          </a>
          <a href="settings.html" class="btn-lg">
          <i class="fa fa-gear fa-2x"></i>
          </a>
       </nav>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="cordova.js"></script>
+      <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

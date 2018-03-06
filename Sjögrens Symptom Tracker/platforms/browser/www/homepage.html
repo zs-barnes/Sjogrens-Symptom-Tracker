@@ -11,72 +11,46 @@
       <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
       <title>Sjögrens Symptom Tracker</title>
    </head>
-   <body>    
-    <div class="navbar-header navbar-dark bg-primary text-center">
-    <a href="calendar.html"> <i class="fa fa-calendar fa-2x"></i> </a>
+  <body>
+      <div class="navbar-header navbar-dark bg-primary text-center">
+          <h1>Symptoms</h1>
+      </div> 
 
-      <h1>Symptoms</h1>
-  </div>
-    
-      <div class="list-group-flush">
-        <a href="#" class="list-group-item list-group-item-primary list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Dry Eyes</h5>
-            <small>3 days ago</small>
-          </div>
-          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-          <small>Donec id elit non mi porta.</small>
+    <div class="container scrollbar scrollbar-primary">
+      <table id="task-table" class="table table-striped">
+        <tr>
+          <th>Symptom</th>
+          <th>Severity</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Options</th>
+        </tr>
+      </table>
+		
+	  <a href="add.html" class="btn btn-primary">Add A Symptom</a>	
+      <a href="#" id="clear-tasks" class="btn btn-primary">Clear All Symptoms</a>
+
+    </div> 
+
+    <nav class="navbar fixed-bottom navbar-primary bg-primary">
+        <a href="homepage.html" class="btn-lg">
+        <i class="fa fa-stethoscope fa-2x gray"></i>
         </a>
-        <a href="#" class="list-group-item list-group-item-primary list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Dry Mouth</h5>
-            <small>3 days ago</small>
-          </div>
-          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-          <small>Donec id elit non mi porta.</small>
+        <a href="history.html" class="btn-lg">
+        <i class="fa fa-line-chart fa-2x"></i>
         </a>
-        <a href="#" class="list-group-item list-group-item-primary list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Fatigue</h5>
-            <small>3 days ago</small>
-          </div>
-          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-          <small>Donec id elit non mi porta.</small>
+        <a href="calendar.html" class="btn-lg">
+        <i class="fa fa-calendar fa-2x"></i>
         </a>
-        <a href="#" class="list-group-item list-group-item-primary list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Joint Pain</h5>
-            <small>3 days ago</small>
-          </div>
-          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-          <small>Donec id elit non mi porta.</small>
+        <a href="settings.html" class="btn-lg">
+        <i class="fa fa-gear fa-2x"></i>
         </a>
-        <a href="#" class="list-group-item list-group-item-primary list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Add a new symptom <i class="fa fa-plus gray"></i></h5>
-          </div>
-          <p class="mb-1">Click here to add a new symptom</p>
-        </a>
-      </div>
-      <nav class="navbar fixed-bottom navbar-primary bg-primary">
-         <a href="homepage.html" class="btn-lg">
-         <i class="fa fa-stethoscope fa-2x gray"></i>
-         </a>
-         <a href="history.html" class="btn-lg">
-         <i class="fa fa-line-chart fa-2x"></i>
-         </a>
-         <a href="notepad.html" class="btn-lg">
-         <i class="fa fa-pencil fa-2x"></i>
-         </a>
-         <a href="settings.html" class="btn-lg">
-         <i class="fa fa-gear fa-2x"></i>
-         </a>
-         <a href="calendar.html" class="btn-lg">
-         <i class="fa fa-calendar fa-2x"></i>
-      </nav>
-      <script type="text/javascript" src="cordova.js"></script>
-      <script type="text/javascript" src="js/homepage.js"></script>
-      <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-      <script type="text/javascript" src="js/bootstrap.min.js"></script>
-   </body>
+     </nav>
+     
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/homepage.js"></script>
+  </body>
 </html>
+

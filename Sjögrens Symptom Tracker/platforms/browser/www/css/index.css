@@ -1,18 +1,29 @@
-.fa{
-    color:white;
+body {
+    background-image: url('http://i68.tinypic.com/hs2qsi.png');
+
+/*  	background: url(../img/teardrop4.png); */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
 }
 <<<<<<< HEAD
 .fa:hover{
     color:black;    
 }
 
-.table{
-    border-collapse: separate;
-    border-spacing: 0px 15px;
-}
-.fa{
-    color: white;
-=======
+.btn {
+    border-radius 20px;
+	font-weight: 400px;
+	font-family: inherit;	
+	margin-top: 500px;
+	width:100px;
+	padding: 0;
+	border: none;
+	background: none;
+	font-size: 25px;
+	white-space: normal;
 
 .table{
     border-collapse: separate;

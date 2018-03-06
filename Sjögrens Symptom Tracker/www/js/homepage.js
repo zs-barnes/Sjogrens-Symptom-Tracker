@@ -17,11 +17,11 @@ $(document).ready(function(){
 		removeTask(id);
 	});
 
-	// Note task event
+	// Display note
 	//on the click event we call the element ('#popup-task')
 	$('#task-table').on('click','#popup-task', function(){
-		comment = $(this).data('task_comment');
-		popupNote(comment);
+		id = $(this).data('id');
+		popupNote(id);
 	});
 
 
@@ -52,7 +52,7 @@ $(document).ready(function(){
 										'<td>' + value.task_priority + '</td>' +
 										'<td>' + value.task_date + '</td>' +
 										'<td>' + value.task_time + '</td>' +
-										'<td><a href="edit.html?id='+ value.id +'">Edit</a> | <a href="#" id="remove-task" data-id="'+ value.id +'">Remove</a> | <a href="#" id="popup-task" data-id="'+ value.id +'">Note</a></td>' +
+										'<td> <a href="#" id="popup-task" data-id="'+ value.id +'">Note</a> <br> <a href="#" id="remove-task" data-id="'+ value.id +'">Remove</a> </td>'+
 										'</tr>');
 			})
 		}
@@ -127,11 +127,15 @@ $(document).ready(function(){
 		}
 	}
 
-	function popupNote(){
-		var task_comment = $('#comment').val();
-
-		var input = localStorage.getItem('tasks');
-		alert(input);
+	function popupNote(id){
+		var taskList = JSON.parse(localStorage.getItem('tasks'));
+		var comment;
+		for(var i=0; i < taskList.length; i++){
+			if(taskList[i].id == id){
+				comment = taskList[i].task_comment;
+			}
+		}
+		swal("Note:",comment);
 	}
 
 	// Function to update tasks
